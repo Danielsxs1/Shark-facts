@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sharks</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f8ff;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: #0077be;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+      width: 100%;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    nav {
+      background-color: #e6f0fa;
+      width: 100%;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    nav ul, nav ol {
+      list-style-position: inside;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav ul li, nav ol li {
+      display: inline;
+      margin: 0 10px;
+    }
+
+    nav ul li a:hover {
+      color: #005f9e;
+      text-decoration: underline;
+    }
+
+    main {
+      padding: 20px;
+      max-width: 800px;
+      text-align: center;
+      flex-grow: 1;
+    }
+
+    img {
+      border-radius: 10px;
+      margin: 20px auto;
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px auto;
+      font-size: 18px;
+      text-align: left;
+      background-color: #f0f8ff;
+      border: 1px solid #0077be;
+    }
+
+    .hidden-table {
+      display: none;
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+    }
+
+    .hidden-table.show {
+      display: table;
+      opacity: 1;
+    }
+
+    th, td {
+      border: 1px solid #0077be;
+      padding: 12px;
+    }
+
+    th {
+      background-color: #0077be;
+      color: white;
+    }
+
+    tr:nth-child(even) {
+      background-color: #e6f0fa;
+    }
+
+    tr:hover {
+      background-color: #d1e7f5;
+    }
+
+    footer {
+      background-color: #0077be;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      width: 100%;
+    }
+
+    button {
+      margin: 20px 0;
+      padding: 10px 20px;
+      background-color: #0077be;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #005f9e;
+    }
+
+    ul, ol {
+      padding-left: 20px;
+      text-align: left;
+    }
+
+    ul li, ol li {
+      margin-bottom: 10px;
+    }
+
+    .did-you-know {
+      background-color: #0077be;
+      color: white;
+      padding: 20px;
+      border-radius: 10px;
+      margin: 20px 0;
+    }
+
+    aside {
+      margin: 20px 0;
+    }
+
+    dl dt {
+      font-weight: bold;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        font-size: 16px;
+      }
+      table {
+        font-size: 14px;
+      }
+      video {
+        width: 100%;
+        height: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Sharks</h1>
+    <p>Welcome to the world of sharks! Explore fascinating facts, learn about their habitats, and discover why they are vital to our oceans.</p>
+  </header>
+  
+  <!-- Navigation moved to the top -->
+  <nav>
+    <ul>
+      <li><a href="#about-sharks">About Sharks</a></li>
+      <li><a href="#shark-facts">Shark Facts</a></li>
+      <li><a href="#resources">Resources</a></li>
+    </ul>
+  </nav>
+  
+  <main>
+    <article id="about-sharks">
+      <h2>About Sharks</h2>
+      <p>Sharks are a group of elasmobranch fish characterized by a cartilaginous skeleton, five to seven gill slits on the sides of the head, and pectoral fins that are not fused to the head.</p>
+      <img src="Shark.jpg" alt="A White Shark swimming in the ocean" title="A White Shark" style="width: 300px; height: auto; border-radius: 10px;">
+      <p>Sharks are a key part of the marine ecosystem, playing a crucial role in maintaining the balance of marine life.</p>
+    </article>
+
+    <section class="did-you-know" id="shark-facts">
+      <h2>Did You Know That...</h2>
+      <ul>
+        <li>🦈 Sharks don't have bones.</li>
+        <li>🌊 Sharks have been around for over 400 million years.</li>
+        <li>🩸 Sharks can detect a drop of blood in the water from miles away.</li>
+        <li>🏊 Sharks can swim up to 25 miles per hour.</li>
+        <li>⚡ Sharks have a sixth sense that helps them detect electrical fields.</li>
+      </ul>
+    </section>
+
+    <button onclick="toggleTable('speciesTable')" aria-label="Toggle Species Table">Toggle Species Table</button>
+    <table id="speciesTable" class="hidden-table">
+      <thead>
+        <tr>
+          <th>Shark Species</th>
+          <th>Habitat</th>
+          <th>Diet</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Great White Shark</td>
+          <td>Coastal waters</td>
+          <td>Carnivore</td>
+        </tr>
+        <tr>
+          <td>Hammerhead Shark</td>
+          <td>Tropical waters</td>
+          <td>Carnivore</td>
+        </tr>
+        <tr>
+          <td>Whale Shark</td>
+          <td>Open ocean</td>
+          <td>Plankton</td>
+        </tr>
+        <tr>
+          <td>Blue Shark</td>
+          <td>Deep ocean</td>
+          <td>Carnivore</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <aside>
+      <button onclick="toggleTable('infoTable')" aria-label="Show Shark Info">Show Shark Info</button>
+      <table id="infoTable" class="hidden-table">
+        <thead>
+          <tr>
+            <th>Category</th>
+            <th>Details</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Shark Species</td>
+            <td>There are over 500 species of sharks.</td>
+          </tr>
+          <tr>
+            <td>Shark Lifespan</td>
+            <td>Some sharks can live up to 70 years or more.</td>
+          </tr>
+          <tr>
+            <td>Shark Size</td>
+            <td>The whale shark is the largest fish in the ocean, reaching lengths of up to 40 feet.</td>
+          </tr>
+        </tbody>
+      </table>
+    </aside>
+
+    <section id="heartwarming-video" style="margin-top: 20px; text-align: center;">
+      <button onclick="toggleVideo()" aria-label="Toggle Video" style="background-color: #0077be; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">
+        Watch a Heartwarming Shark Video
+      </button>
+      <div id="videoContainer" style="display: none; margin-top: 20px;">
+        <video controls title="A heartwarming shark video" style="max-width: 100%; border-radius: 10px;">
+          <source src="Sharkvideo.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </section>
+
+    <!-- Resources moved to the bottom -->
+    <section id="resources">
+      <h4>Shark Websites</h4>
+      <nav>
+        <ul>
+          <li><a href="https://www.sharksider.com/" target="_blank">Shark Sider</a></li>
+          <li><a href="https://www.sharktrust.org/" target="_blank">Shark Trust</a></li>
+          <li><a href="https://www.sharks.org/" target="_blank">Sharks.org</a></li>
+          <li><a href="https://www.sharklife.com/" target="_blank">Shark Life</a></li>
+        </ul>
+        <ol>
+          <li><a href="https://www.nationalgeographic.com/animals/fish/facts/sharks" target="_blank">National Geographic</a></li>
+          <li><a href="https://www.worldwildlife.org/species/sharks" target="_blank">World Wildlife Fund</a></li>
+          <li><a href="https://ocean.si.edu/ocean-life/sharks-rays/sharks" target="_blank">Smithsonian Ocean</a></li>
+        </ol>
+      </nav>
+    </section>
+  </main>
+  
+  <footer>
+    <p>© 2025 Shark Enthusiasts. All rights reserved.</p>
+    <a href="#top" style="color: white; text-decoration: none;">Back to Top</a>
+    <div style="margin-top: 10px;">
+      <audio controls loop style="width: 100%; max-width: 300px;">
+        <source src="Jaws.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+  </footer>
+
+  <script>
+    function toggleTable(tableId) {
+      const table = document.getElementById(tableId);
+      table.classList.toggle('show');
+      if (!table.classList.contains('show')) {
+        setTimeout(() => table.style.display = 'none', 500);
+      } else {
+        table.style.display = 'table';
+      }
+    }
+
+    function toggleVideo() {
+      const videoContainer = document.getElementById('videoContainer');
+      videoContainer.style.display = videoContainer.style.display === 'none' || videoContainer.style.display === '' ? 'block' : 'none';
+    }
+  </script>
+</body>
+</html>
