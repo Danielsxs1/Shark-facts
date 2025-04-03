@@ -23,3 +23,5 @@ You can download the files and open `index.html` in your browser.
 - Interactive shark quiz 🎯  
 
 Feel free to give feedback or suggest improvements! 🏄‍♂️  
+
+#sharks #webdevelopment #firstwebsite
